@@ -60,19 +60,36 @@
       <img src="satsconverter-logo.svg" id="logo" alt="Sats Converter" />
 
       <input class="value-input" id="input_sat" data-currency="sat"  data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 0, 'digitsOptional': false"  inputmode="decimal">
-      <label for="input_sat" class="value-label" id="sats-label">sat</label>
+      <label for="input_sat" class="value-label" id="sats-label">⚪️ sat</label>
 
       <input class="value-input bitcoin" id="input_btc" data-currency="btc"  data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 8, 'digitsOptional': true" value="0.00000001" inputmode="decimal">
-      <label for="input_btc" class="value-label">Bitcoin</label>
+      <label for="input_btc" class="value-label">🌎 Bitcoin</label>
 
       <input class="value-input" id="input_usd" data-currency="usd" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 4, 'digitsOptional': false" inputmode="decimal">
-      <label for="input_btc" class="value-label">US Dollar</label>
+      <label for="input_btc" class="value-label">🇺🇸 US Dollar</label>
 
       <input class="value-input" id="input_eur" data-currency="eur" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 4, 'digitsOptional': false" inputmode="decimal">
-      <label for="input_btc" class="value-label">Euro</label>
+      <label for="input_btc" class="value-label">🇪🇺 Euro</label>
 
-      <input class="value-input" id="input_bgp" data-currency="gbp" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 4, 'digitsOptional': false" inputmode="decimal">
-      <label for="input_btc" class="value-label">GB&nbsp;Pound</label>
+      <input class="value-input" id="input_gbp" data-currency="gbp" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 4, 'digitsOptional': false" inputmode="decimal">
+      <label for="input_btc" class="value-label">🇬🇧 GB&nbsp;Pound</label>
+
+      <input class="value-input" id="input_cny" data-currency="cny" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 4, 'digitsOptional': false" inputmode="decimal">
+      <label for="input_btc" class="value-label">🇨🇳 Chinese&nbsp;Yuan</label>
+
+      <input class="value-input" id="input_jpy" data-currency="jpy" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 4, 'digitsOptional': false" inputmode="decimal">
+      <label for="input_btc" class="value-label">🇯🇵 Japanese&nbsp;Yen</label>
+
+      <input class="value-input" id="input_cad" data-currency="cad" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 4, 'digitsOptional': false" inputmode="decimal">
+      <label for="input_btc" class="value-label">🇨🇦 Canadian&nbsp;Dollar</label>
+
+      <input class="value-input" id="input_rub" data-currency="rub" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 4, 'digitsOptional': false" inputmode="decimal">
+      <label for="input_btc" class="value-label">🇷🇺 Russian&nbsp;Rubble</label>
+
+      <input class="value-input" id="input_chf" data-currency="chf" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 4, 'digitsOptional': false" inputmode="decimal">
+      <label for="input_btc" class="value-label">🇨🇭 Swiss&nbsp;Franc</label>
+
+
 
       <div class="footer">
 
@@ -296,7 +313,7 @@
     </select>
     <input type="range" class="btcpay-input-range" min="1" max="21000" step="1" value="21" style="width:209px;" oninput="handleSliderInput(event);return false" />
   </div>
-<button type="submit" class="submit" name="submit" style="min-width:209px;min-height:65px;border-radius:4px;border-style:none;background-color:#2f2f2f;" title="Pay with BTCPay Server, a Self-Hosted Bitcoin Payment Processor"><span style="color:#fff">DONATE</span></button>
+<button type="submit" class="submit donation" name="submit" title="Pay with BTCPay Server, a Self-Hosted Bitcoin Payment Processor">DONATE</button>
 </form>
 <script>
     if (!window.btcpay) {
@@ -356,9 +373,22 @@
             <span id="satseur" class="satsfiat"></span> sats per 1 EUR
             <br>
             <span id="satsgbp" class="satsfiat"></span> sats per 1 GBP
+            <br>
+            <span id="satscny" class="satsfiat"></span> sats per 1 CNY
+            <br>
+            <span id="satsjpy" class="satsfiat"></span> sats per 1 JPY
+            <br>
+            <span id="satscad" class="satsfiat"></span> sats per 1 CAD
+            <br>
+            <span id="satsrub" class="satsfiat"></span> sats per 1 RUB
+            <br>
+            <span id="satschf" class="satsfiat"></span> sats per 1 CHF
+
           </div>
 
-          BETA ⚠️ Fork on <a href="https://github.com/pedromvpg/sat-converter" target="_blank">Github</a> | Price source <a href="https://api.coindesk.com/v1/bpi/currentprice.json" target="_blank">api.coindesk.com/v1/</a> | Content Released under MIT license.
+          <!-- BETA ⚠️ Fork on <a href="https://github.com/pedromvpg/sat-converter" target="_blank">Github</a> | Price source <a href="https://api.coindesk.com/v1/bpi/currentprice.json" target="_blank">api.coindesk.com/v1/</a> | Content Released under MIT license. -->
+          BETA ⚠️ Fork on <a href="https://github.com/pedromvpg/sat-converter" target="_blank">Github</a> | Price source <a href="https://www.coingecko.com/en/api/documentation" target="_blank">coingecko.com/en/api</a> | Content Released under MIT license.
+
           <br>
           This website does not use cookies nor collect personal data.
           <br>
